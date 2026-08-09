@@ -1,0 +1,292 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+    background-color: #fdf6f0;
+    color: #333;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ===== 게이트 페이지 ===== */
+.gate-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 40px;
+}
+
+.emoji-header {
+    font-size: 80px;
+    margin-bottom: 16px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.gate-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #5a3e2b;
+    margin-bottom: 40px;
+}
+
+.button-list {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.gate-button {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    background: #fff;
+    border: 2px solid #f5c6a0;
+    border-radius: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #5a3e2b;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.gate-button:hover,
+.gate-button:active {
+    background: #fff8f2;
+    border-color: #e8a06a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 콘텐츠 페이지 ===== */
+.content-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 18px 60px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #8b6914;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.back-button:hover,
+.back-button:active {
+    background: #fef3e0;
+}
+
+.bottom-back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 14px;
+    background: #fff;
+    border: 2px solid #f5c6a0;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.content-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #5a3e2b;
+    margin: 20px 0;
+    padding-bottom: 16px;
+    border-bottom: 3px solid #f5c6a0;
+}
+
+.content-intro {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.content-intro p {
+    margin-bottom: 12px;
+}
+
+.content-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* 섹션 */
+.tip-section {
+    background: #fff;
+    padding: 22px 18px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tip-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a3e2b;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.tip-section p {
+    margin-bottom: 12px;
+}
+
+.tip-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* 하이라이트 텍스트 */
+.highlight {
+    color: #d35400;
+    font-weight: 700;
+}
+
+.highlight-box {
+    background: #fff3cd;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border-left: 4px solid #ffc107;
+    font-weight: 600;
+}
+
+/* 경고 텍스트 */
+.warning {
+    color: #c0392b;
+    font-weight: 700;
+}
+
+/* 정보 박스 */
+.info-box {
+    background: #f0f7ff;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid #5dade2;
+    margin: 12px 0;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* 경험 박스 */
+.experience-box {
+    background: #fdf2e9;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid #e67e22;
+    margin: 12px 0;
+}
+
+/* 핵심 포인트 */
+.key-point {
+    background: #fef9e7;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid #f39c12;
+    margin: 12px 0;
+}
+
+.key-point p {
+    margin-bottom: 10px;
+}
+
+.key-point p:last-child {
+    margin-bottom: 0;
+}
+
+/* 전화 멘트 */
+.phone-script {
+    background: #eafaf1;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid #27ae60;
+    margin: 16px 0;
+}
+
+.phone-script h3 {
+    font-size: 15px;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.phone-script p {
+    font-style: italic;
+    color: #2c3e50;
+}
+
+/* 서브노트 */
+.sub-note {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* 마무리 섹션 */
+.closing {
+    background: linear-gradient(135deg, #fdf6f0, #fff8f2);
+    border: 2px solid #f5c6a0;
+    text-align: center;
+}
+
+.closing-message {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5a3e2b;
+    margin-top: 8px;
+}
+
+/* 반응형 (이미 모바일 퍼스트이므로 데스크탑 보정) */
+@media (min-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    .gate-container {
+        padding-top: 100px;
+    }
+
+    .emoji-header {
+        font-size: 100px;
+    }
+
+    .gate-title {
+        font-size: 26px;
+    }
+
+    .content-container {
+        padding: 30px 24px 80px;
+    }
+
+    .content-title {
+        font-size: 28px;
+    }
+
+    .tip-section {
+        padding: 28px 24px;
+    }
+}
