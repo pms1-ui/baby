@@ -12,17 +12,18 @@
 
 ```
 baby/
-├── index.html          # 게이트 페이지 (대문)
-├── daycare-tips.html   # 어린이집 중간입소 꿀팁
-├── style.css           # 공통 스타일 (모바일 베이스)
-└── README.md
+├── index.html              # 게이트 페이지 (대문)
+├── style.css               # 공통 스타일 (모바일 베이스)
+├── README.md
+└── pages/
+    └── daycare-tips.html   # 어린이집 중간입소 꿀팁
 ```
 
 ## 콘텐츠 목록
 
 | 제목 | 파일 |
 |------|------|
-| 출생아기 어린이집 중간입소 꿀팁 | daycare-tips.html |
+| 출생아기 어린이집 중간입소 꿀팁 | pages/daycare-tips.html |
 
 ## 기술 스택
 
