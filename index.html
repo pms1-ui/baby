@@ -21,10 +21,54 @@
             <a href="pages/newborn-care.html" class="gate-button">신생아 육아 총정리</a>
             <a href="pages/newborn-outing.html" class="gate-button">신생아 외출 가이드</a>
             <a href="pages/child-account.html" class="gate-button">아동수당 계좌 세팅 실전 노트</a>
-            <a href="pages/realestate-study.html" class="gate-button gate-button--special">빤짝이네 부동산공부</a>
-            <a href="pages/wealth-study.html" class="gate-button gate-button--special">빤짝이네 재테크·투자공부</a>
-            <a href="pages/selfdev-study.html" class="gate-button gate-button--special">빤짝이네 자기계발 책장</a>
+            <a href="pages/realestate-study.html" class="gate-button gate-button--special" onclick="event.preventDefault(); openLockModal('pages/realestate-study.html')">빤짝이네 부동산공부</a>
+            <a href="pages/wealth-study.html" class="gate-button gate-button--special" onclick="event.preventDefault(); openLockModal('pages/wealth-study.html')">빤짝이네 재테크·투자공부</a>
+            <a href="pages/selfdev-study.html" class="gate-button gate-button--special" onclick="event.preventDefault(); openLockModal('pages/selfdev-study.html')">빤짝이네 자기계발 책장</a>
         </div>
     </div>
+
+    <!-- 비밀번호 모달 -->
+    <div id="lockModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <p class="modal-title">🔒 비밀번호를 입력하세요</p>
+            <input type="password" id="lockInput" class="modal-input" placeholder="비밀번호 4자리" maxlength="4" inputmode="numeric">
+            <div class="modal-buttons">
+                <button onclick="closeLockModal()" class="modal-btn modal-btn--cancel">취소</button>
+                <button onclick="checkPassword()" class="modal-btn modal-btn--confirm">확인</button>
+            </div>
+            <p id="lockError" class="modal-error" style="display:none;">비밀번호가 틀렸습니다.</p>
+        </div>
+    </div>
+
+    <script>
+    let targetUrl = '';
+    function openLockModal(url) {
+        targetUrl = url;
+        document.getElementById('lockModal').style.display = 'flex';
+        document.getElementById('lockInput').value = '';
+        document.getElementById('lockError').style.display = 'none';
+        setTimeout(() => document.getElementById('lockInput').focus(), 100);
+    }
+    function closeLockModal() {
+        document.getElementById('lockModal').style.display = 'none';
+        targetUrl = '';
+    }
+    function checkPassword() {
+        const input = document.getElementById('lockInput').value;
+        if (input === '7720') {
+            window.location.href = targetUrl;
+        } else {
+            document.getElementById('lockError').style.display = 'block';
+            document.getElementById('lockInput').value = '';
+            document.getElementById('lockInput').focus();
+        }
+    }
+    document.getElementById('lockInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') checkPassword();
+    });
+    document.getElementById('lockModal').addEventListener('click', function(e) {
+        if (e.target === this) closeLockModal();
+    });
+    </script>
 </body>
 </html>
