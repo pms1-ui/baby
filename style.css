@@ -326,6 +326,15 @@ body {
     color: var(--seed-color-fg-subtle);
 }
 
+/* 아이템 이미지 */
+.item-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--seed-radius-sm);
+    margin: 8px 0 12px;
+    display: block;
+}
+
 /* 마무리 섹션 */
 .closing {
     border: 1px solid var(--seed-color-stroke);
