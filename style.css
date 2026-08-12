@@ -389,6 +389,31 @@ body {
     margin-bottom: 0 !important;
 }
 
+/* 독서 상태 배지 */
+.book-status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: var(--seed-radius-full);
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.book-status--done {
+    background: var(--seed-color-success-weak);
+    color: var(--seed-color-success);
+}
+
+.book-status--reading {
+    background: var(--seed-color-info-weak);
+    color: var(--seed-color-info);
+}
+
+.book-status--todo {
+    background: var(--seed-color-bg-basement);
+    color: var(--seed-color-fg-disabled);
+}
+
 .book-reason {
     padding: 0 4px;
     margin-bottom: 4px;
