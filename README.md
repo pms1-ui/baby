@@ -71,6 +71,7 @@ baby/
 ## 작업 규칙
 
 - Git 원격 저장소: https://github.com/pms1-ui/baby.git
+- 배포 주소: https://baby-ms.netlify.app/
 - 작업 완료 시 자동 커밋 & 푸시 (묻지 않고 바로)
 - 브랜치: main
 - 콘텐츠 추가 시: ref/ 에 원본 텍스트 추가 → pages/ 에 HTML 페이지 생성 → index.html 에 버튼 추가
